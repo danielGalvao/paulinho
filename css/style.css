@@ -31,6 +31,7 @@ section {
   width: 100%;
   height: 100%;
   position: relative;
+  min-height: 360px;
 }
 
 .intro {
@@ -45,7 +46,7 @@ section {
   left: 0;
   right: 0;
   margin: auto;
-  top:0;
+  top: -120px;
   bottom: 0;
 }
 
@@ -67,12 +68,12 @@ section {
 }
 
 .logo a {
-  width: 92px;
+  width: 96px;
   background: #00458a;
   padding: 20px;
   border-radius: 6%;
   display: block;
-  margin: 12px auto;
+  margin: 32px auto 0;
   text-decoration: none;
   color: #fff;
 }
