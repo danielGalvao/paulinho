@@ -1,0 +1,100 @@
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #00458a;
+}
+
+h3 {
+  color: #00458a;
+  text-align: center;
+  font-size: 34px;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.intro {
+  position: relative;
+  background: #32BBBA;
+}
+
+.logo {
+  width: 528px;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top:0;
+  bottom: 0;
+}
+
+.logo h1 {
+  width: 528px;
+  height: 120px;
+  color: #fff;
+  background: url(../img/logo-frost.png) no-repeat;
+  text-indent: -9999px;
+  margin: 0;
+}
+
+.logo p {
+  text-align: center;
+  color: #fff;
+  font-size: 21px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo a {
+  width: 92px;
+  background: #00458a;
+  padding: 20px;
+  border-radius: 6%;
+  display: block;
+  margin: 12px auto;
+  text-decoration: none;
+  color: #fff;
+}
+
+.first {
+  padding-top: 30px;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.highlighted-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.configs li p {
+  padding-left: 30px;
+}
