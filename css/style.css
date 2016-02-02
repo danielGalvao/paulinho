@@ -44,7 +44,7 @@ section {
 
 .intro {
   position: relative;
-  background: #32BBBA;
+  background: #32BBBA url('images/snow-transparent.gif');
 }
 
 .logo {
