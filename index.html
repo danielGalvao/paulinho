@@ -6,44 +6,126 @@
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <section class="intro">
       <div class="logo">
         <h1>Frost</h1>
         <p>Static web page generator</p>
-        <a href="#step-1">Get started!</a>
+        <div class="buttons">
+          <a class="started" href="#step-1">Get started!</a>
+          <a class="what-is" href="#what-is">What's Frost?</a>
+        </div>
       </div>
     </section>
-    <section id="step-1">
+    <section id="what-is">
+      <div class="what-is-container container">
+        <h3>What's Frost?</h3>
+        <h4>Frost is a Static web page generator</h4>
+        <p class="problem">If you have a website that don't provide a static html per page and you want to do that, all that you need to do is:</p>
+        <p><b>1 )</b> Setting up the Frost configuration with the paths of your "origin", the path of your "static" site (where your final files will be) and others configurations.</p>
+        <p><b>2 )</b> Run the index.js with phatomjs.</p>
+        <p><b>3 )</b> AWWW YEAH! You'll have a folder that contains all pages of your website with the anchors directing to your "staticHostname/page/node".</p>
+      </div>
+    </section>
+    <section class="step-1" id="step-1">
       <div class="first">
         <h3>Before you start, make sure you have <b><a href="http://phantomjs.org/" target="_blank">phantomjs</a></b> installed.</h3>
         <p class="highlighted-title">Configuring Frost</p>
         <ul class="configs">
           <li>
-            <b>staticDir: "../path/para/static"</b>
+            <b>staticDir: "../path/to/static"</b>
             <p>
               The relative path to the Frost root folder. This is where the static files will be put
-              scheme: "http|https"
             </p>
           </li>
           <li>
-            <b>staticDir: "../path/para/static"</b>
+            <b>scheme: "http|https"</b>
             <p>
-              The relative path to the Frost root folder. This is where the static files will be put
-              scheme: "http|https"
+              The origin website protocol
             </p>
           </li>
           <li>
-            <b>staticDir: "../path/para/static"</b>
+            <b>hostname: "origin.example.com"</b>
             <p>
-              The relative path to the Frost root folder. This is where the static files will be put
-              scheme: "http|https"
+              The origin site hostname
+            </p>
+          </li>
+          <li>
+            <b>baseUrl: (function)</b>
+            <p>
+              The baseUrl generator function, change this if you want something more specific like adding a condition to the postfix
+            </p>
+          </li>
+          <li>
+            <b>staticScheme: "http|https"</b>
+            <p>
+              The static website protocol (destination)
+            </p>
+          </li>
+          <li>
+            <b>staticHostname: "example.com"</b>
+            <p>
+              Destination hostname
+            </p>
+          </li>
+          <li>
+            <b>staticBaseUrl: (function)</b>
+            <p>
+              Same as baseUrl but for the destination website
+            </p>
+          </li>
+          <li>
+            <b>pageLoadTimeout</b>
+            <p> 
+              The maximum time that frost will wait for the website to load (in seconds)
             </p>
           </li>
         </ul>
+        <a class="running-button" href="#step-2">Running Frost!</a>
       </div>
     </section>
-    <script type="text/javascript" src="js/lib/scrollToAnchor.min.js"></script>
+    <section class="running" id="step-2">
+      <div class="running-container container">
+        <h3>Running Frost!</h3>
+        <p>To run Frost from the command line you should use the following command:</p>
+        <code>$ phantomjs index.js</code>
+        <p>Also, you must specify some options:</p>
+        <div class="mode">
+          <p><code>--mode:</code> "list" or "crawl" (required)</p>
+          <p>list - makes Frost run on a specified list of links, no more or less.</p>
+          <p>crawl - makes Frost run on every page on a list of links AND their child pages (It is not recommended to use the 'crawl' mode on a automatic execution because it can be hard to predict the execution time). PS: The crawl mode does not follow any link more than once</p>
+        </div>
+        <div class="list">
+          <p><code>--list</code>: "/,/link1/path,/products" (required)</p>
+          <p>The path list to be followed by Frost. It is recommended that if you use mode="crawl", the list should have only one path (usually the home path "/").
+          </p>
+        </div>
+        <div class="type">
+          <p><code>--type</code>: The type of the Frost behavior, defaults to "page".</p>
+        </div>
+        <div class="env">
+          <p><code>--env</code>: "default|local|hom|prod|etc" (default: "default")</p>
+          <p>Specifies what config file to use. The config files should be located at config/{<code>env</code>}.js</p>
+        </div>
+        <div class="examples">
+          <p><b>Two basic implementation examples:</b></p>
+          <div class="example-list">
+            <p>1st "list"</p>
+            <code>$ phantomjs index.js --list="/,/products,/recipes" --mode="list" --env="{env}"</code>
+          </div>
+          <div class="example-crawl">
+            <p>2nd "crawl"</p>
+            <code>$ phantomjs index.js --list="/" --mode="crawl" --env="{env}"</code>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="js/lib/smooth-scroll.min.js"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        selector: 'a'
+      });
+      /* https://github.com/cferdinandi/smooth-scroll */
+    </script>
   </body>
 </html>

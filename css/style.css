@@ -71,11 +71,30 @@ section {
   width: 96px;
   background: #00458a;
   padding: 20px;
-  border-radius: 6%;
+  border-radius: 8px;
   display: block;
-  margin: 32px auto 0;
   text-decoration: none;
   color: #fff;
+}
+
+.buttons {
+  overflow: hidden;
+  margin-top: 40px;
+  padding: 0 70px;
+}
+
+.started {
+  float: left;
+}
+
+.logo .what-is {
+  float: right;
+  width: 110px;
+}
+
+.step-1 {
+  min-height: 860px;
+  background-color: #32BBBA;
 }
 
 .first {
@@ -96,6 +115,64 @@ section {
   text-align: center;
 }
 
+.configs {
+  margin-bottom: 30px;
+}
+
 .configs li p {
   padding-left: 30px;
+}
+
+.what-is-container {
+  height: 340px;
+}
+
+.what-is-container h4 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.problem {
+  font-size: 20px;
+}
+
+.running-button {
+  display: block;
+  padding: 16px;
+  width: 115px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.running {
+  background-color: #00458a;
+  color: #fff;
+  min-height: 750px;
+}
+
+.running h3 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  max-width: 700px;
+}
+
+.running-container {
+  height: 570px;
+  max-width: 775px;
+  min-height: 720px;
+}
+
+.examples p {
+  text-align: center;
 }
