@@ -20,7 +20,7 @@
     <section id="what-is">
       <div class="what-is-container container">
         <h3>What's Frost?</h3>
-        <h4>Frost is a Static web page generator</h4>
+        <h4>Frost is a static web page generator</h4>
         <p class="problem">If you have a website that don't provide a static html per page and you want to do that, all that you need to do is:</p>
         <p><b>1 )</b> Setting up the Frost configuration with the paths of your "origin", the path of your "static" site (where your final files will be) and others configurations.</p>
         <p><b>2 )</b> Run the index.js with phatomjs.</p>
@@ -92,21 +92,25 @@
         <p>Also, you must specify some options:</p>
         <div class="mode">
           <p><code>--mode:</code> "list" or "crawl" (required)</p>
-          <p>list - makes Frost run on a specified list of links, no more or less.</p>
-          <p>crawl - makes Frost run on every page on a list of links AND their child pages (It is not recommended to use the 'crawl' mode on a automatic execution because it can be hard to predict the execution time). PS: The crawl mode does not follow any link more than once</p>
+          <p class="desc">list - makes Frost run on a specified list of links, no more or less.</p>
+          <p class="desc">crawl - makes Frost run on every page on a list of links AND their child pages (It is not recommended to use the 'crawl' mode on a automatic execution because it can be hard to predict the execution time). PS: The crawl mode does not follow any link more than once</p>
         </div>
+        <hr>
         <div class="list">
           <p><code>--list</code>: "/,/link1/path,/products" (required)</p>
-          <p>The path list to be followed by Frost. It is recommended that if you use mode="crawl", the list should have only one path (usually the home path "/").
+          <p class="desc">The path list to be followed by Frost. It is recommended that if you use mode="crawl", the list should have only one path (usually the home path "/").
           </p>
         </div>
+        <hr>
         <div class="type">
           <p><code>--type</code>: The type of the Frost behavior, defaults to "page".</p>
         </div>
+        <hr>
         <div class="env">
           <p><code>--env</code>: "default|local|hom|prod|etc" (default: "default")</p>
-          <p>Specifies what config file to use. The config files should be located at config/{<code>env</code>}.js</p>
+          <p class="desc">Specifies what config file to use. The config files should be located at config/{<code>env</code>}.js</p>
         </div>
+        <hr>
         <div class="examples">
           <p><b>Two basic implementation examples:</b></p>
           <div class="example-list">

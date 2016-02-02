@@ -149,7 +149,7 @@ section {
 .running {
   background-color: #00458a;
   color: #fff;
-  min-height: 750px;
+  min-height: 880px;
 }
 
 .running h3 {
@@ -168,11 +168,26 @@ section {
 }
 
 .running-container {
-  height: 570px;
   max-width: 775px;
-  min-height: 720px;
+  height: 800px;
+}
+
+.examples {
+  margin-top: 60px;
 }
 
 .examples p {
   text-align: center;
+}
+
+.example-list, .example-crawl {
+  margin-bottom: 40px;
+}
+
+.running .desc {
+  padding: 0 0 0 20px;
+}
+
+.running hr {
+  border-color: #32BBBA;
 }
