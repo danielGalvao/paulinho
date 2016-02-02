@@ -75,7 +75,7 @@ section {
   padding: 0px;
 }
 
-.logo a {
+.logo a, .button {
   width: 96px;
   background: #00458a;
   padding: 20px;
@@ -131,6 +131,10 @@ section {
   padding-left: 30px;
 }
 
+#what-is {
+  min-height: 500px;
+}
+
 .what-is-container {
   height: 340px;
 }
@@ -140,6 +144,12 @@ section {
   margin-bottom: 60px;
 }
 
+.what-is-container .button {
+  float: none;
+  margin: 0 auto;
+  width: 78px;
+}
+
 .problem {
   font-size: 20px;
 }
@@ -147,7 +157,7 @@ section {
 .running-button {
   display: block;
   padding: 16px;
-  width: 115px;
+  width: 103px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 6px;
