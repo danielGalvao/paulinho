@@ -47,6 +47,14 @@ section {
   background: #32BBBA url('images/snow-transparent.gif');
 }
 
+.intro .github-docs {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
 .logo {
   width: 528px;
   height: 120px;
@@ -208,4 +216,14 @@ section {
 
 .running hr {
   border-color: #32BBBA;
+}
+
+.footer {
+  background: #32BBBA;
+  height: 70px;
+  min-height: 70px;
+}
+
+.footer h3 {
+  padding-top: 10px;
 }
