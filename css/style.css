@@ -155,7 +155,8 @@ section {
 .what-is-container .button {
   float: none;
   margin: 0 auto;
-  width: 78px;
+  width: 80px;
+  text-align: center;
 }
 
 .problem {
@@ -165,7 +166,8 @@ section {
 .running-button {
   display: block;
   padding: 16px;
-  width: 103px;
+  width: 110px;
+  text-align: center;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 6px;
