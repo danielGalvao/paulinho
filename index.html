@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-<!--     <div class="overlay"></div> -->
-    <section class="intro">
+    <a href="#intro" class="back-to-top"></a>
+    <section id="intro" class="intro">
       <a class="github-docs" href="https://github.com/justdigital/frost">See full documentation here</a>
       <div class="logo">
         <h1>Frost</h1>
-        <p>Static web page generator</p>
+        <p><b>Static web page generator</b></p>
         <div class="buttons">
-          <a class="started" href="#step-1">Get started!</a>
-          <a class="what-is" href="#what-is">What's Frost?</a>
+          <a class="started button" href="#step-1">Get started!</a>
+          <a class="what-is button" href="#what-is">What's Frost?</a>
         </div>
       </div>
+      <i class="shake down-arrow"></i>
     </section>
     <section id="what-is">
       <div class="what-is-container container">
@@ -84,7 +85,7 @@
             </p>
           </li>
         </ul>
-        <a class="running-button" href="#step-2">Second Step</a>
+        <a class="running-button button" href="#step-2">Second Step</a>
       </div>
     </section>
     <section class="running" id="step-2">
@@ -128,7 +129,12 @@
       </div>
     </section>
     <section class="footer" id="step-3">
-      <h3>Powered by Just Digital</h3>
+      <div class="powered-by">
+        <h3>Powered by</h3>
+        <a target="_blank" href="http://justdigital.com.br">
+          <i class="just-logo">Just Digital</i>
+        </a>
+      </div>
     </section>
     <script type="text/javascript" src="js/lib/smooth-scroll.min.js"></script>
     <script type="text/javascript">

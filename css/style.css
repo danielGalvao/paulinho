@@ -29,6 +29,7 @@ body {
 
 code {
   background: rgba(50, 187, 186,0.2);
+  padding-left: 10px;
 }
 
 .step-1 code {
@@ -44,7 +45,20 @@ section {
 
 .intro {
   position: relative;
-  background: #32BBBA url('images/snow-transparent.gif');
+  background-color: #32BBBA;
+  z-index: 2;
+}
+
+.intro:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background: url('images/snow-transparent.gif');
+  display: block;
+  pointer-events: none;
 }
 
 .intro .github-docs {
@@ -108,8 +122,18 @@ section {
   width: 110px;
 }
 
+.down-arrow {
+  background: url(images/down.png);
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  right: 70px;
+  bottom: 60px;
+  background-size: 50px 50px;
+}
+
 .step-1 {
-  min-height: 860px;
+  min-height: 900px;
   background-color: #32BBBA;
 }
 
@@ -132,7 +156,7 @@ section {
 }
 
 .configs {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .configs li p {
@@ -157,6 +181,7 @@ section {
   margin: 0 auto;
   width: 80px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .problem {
@@ -172,6 +197,7 @@ section {
   background-color: #fff;
   border-radius: 6px;
   font-weight: bold;
+  color: #00458a;
 }
 
 .running {
@@ -200,6 +226,10 @@ section {
   height: 800px;
 }
 
+.env .desc code {
+  padding: 0;
+}
+
 .examples {
   margin-top: 60px;
 }
@@ -224,8 +254,93 @@ section {
   background: #32BBBA;
   height: 70px;
   min-height: 70px;
+  z-index: 2;
 }
 
 .footer h3 {
-  padding-top: 10px;
+  text-align: left;
+  float: left;
+  margin-top: 12px;
+}
+
+.powered-by {
+  overflow: hidden;
+  width: 363px;
+  height: 100%;
+  float: right;
+  margin-right: 40px;
+}
+
+.powered-by a {
+  text-decoration: none;
+  color: #00458a;
+  display: block;
+  float: right;
+  margin-top: 21px;
+}
+
+.just-logo {
+  background: url(../img/logo-just.png) no-repeat;
+  display: block;
+  float: right;
+  text-indent: -100%;
+  overflow: hidden;
+  width: 150px;
+  height: 34px;
+}
+
+
+/* Components */
+.back-to-top {
+  background: url(images/back_to_top.png) no-repeat;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 0;
+  right: 70px;
+  bottom: 25px;
+  z-index: 1;
+  opacity: 0.5;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+.button {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.button:hover {
+  background-color: #003163;
+  color: #fff;
+}
+
+@keyframes topDown {
+  0%, to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  10%,30%,50%,70%,90% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px)
+  }
+  20%,40%,60%,80% {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px)
+  }
+}
+.shake {
+  -webkit-animation: topDown 8s ease-in infinite;
+  animation: topDown 8s ease-in infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
